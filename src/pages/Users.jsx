@@ -16,14 +16,11 @@ function Admin() {
             navigate("/welcome");
         } else {
             try {
-                const response = await axios.get(
-                    "http://localhost:3000/users",
-                    {
-                        headers: {
-                            token: token,
-                        },
-                    }
-                );
+                const response = await axios.get("https://halifa.xyz/users", {
+                    headers: {
+                        token: token,
+                    },
+                });
                 if (response.status !== 200) {
                     toast.error(response.data);
                 } else {
@@ -41,14 +38,11 @@ function Admin() {
             navigate("/welcome");
         } else {
             try {
-                const response = await axios.get(
-                    "http://localhost:3000/files",
-                    {
-                        headers: {
-                            token: token,
-                        },
-                    }
-                );
+                const response = await axios.get("https://halifa.xyz/files", {
+                    headers: {
+                        token: token,
+                    },
+                });
                 if (response.status !== 200) {
                     toast.error(response.data);
                 } else {
@@ -64,7 +58,7 @@ function Admin() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.put(
-                `http://localhost:3000/user`,
+                `https://halifa.xyz/user`,
                 {
                     email: email,
                     status: currentStatus === "active" ? "inactive" : "active",
@@ -90,7 +84,7 @@ function Admin() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.put(
-                `http://localhost:3000/user`,
+                `https://halifa.xyz/user`,
                 {
                     email: email,
                     file_title: title,
@@ -116,7 +110,7 @@ function Admin() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.delete(
-                `http://localhost:3000/user/${email}`,
+                `https://halifa.xyz/user/${email}`,
                 {
                     headers: {
                         token: token,

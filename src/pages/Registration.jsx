@@ -27,7 +27,7 @@ function Registration() {
             return;
         }
         await axios
-            .post("http://localhost:3000/registration", {
+            .post("https://halifa.xyz/registration", {
                 email: email,
                 full_name: fullName,
                 password: password,

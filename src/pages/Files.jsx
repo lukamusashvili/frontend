@@ -39,14 +39,11 @@ function Files() {
             navigate("/welcome");
         } else {
             try {
-                const response = await axios.get(
-                    "http://localhost:3000/files",
-                    {
-                        headers: {
-                            token: token,
-                        },
-                    }
-                );
+                const response = await axios.get("https://halifa.xyz/files", {
+                    headers: {
+                        token: token,
+                    },
+                });
                 if (response.status !== 200) {
                     toast.error(response.data);
                 } else {
@@ -62,7 +59,7 @@ function Files() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.post(
-                `http://localhost:3000/file`,
+                `https://halifa.xyz/file`,
                 {
                     title: title,
                     description: description,
@@ -91,7 +88,7 @@ function Files() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.put(
-                `http://localhost:3000/file`,
+                `https://halifa.xyz/file`,
                 {
                     title: title,
                     description: description,
@@ -120,7 +117,7 @@ function Files() {
         const token = localStorage.getItem("token");
         try {
             const response = await axios.delete(
-                `http://localhost:3000/file/${title}`,
+                `https://halifa.xyz/file/${title}`,
                 {
                     headers: {
                         token: token,

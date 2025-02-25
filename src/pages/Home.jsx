@@ -23,7 +23,7 @@ function Home() {
             } else {
                 try {
                     const response = await axios.get(
-                        "http://localhost:3000/user",
+                        "https://halifa.xyz/user",
                         {
                             headers: {
                                 token: token,

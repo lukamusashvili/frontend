@@ -20,7 +20,7 @@ function Login() {
             return;
         }
         await axios
-            .post("http://localhost:3000/login", {
+            .post("https://halifa.xyz/login", {
                 email: email,
                 password: password,
             })
