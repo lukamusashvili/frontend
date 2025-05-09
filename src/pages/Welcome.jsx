@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+=======
+import { Auth } from "../components/layouts/auth-layout";
+>>>>>>> 49379ea7b86a9a5186bb82abbc73b7a0b663a3a6
 import { Button } from "../components/button";
 import { Table } from "../components/table/table";
 
+<<<<<<< HEAD
 const tempData = [
   {
     id: 1,
@@ -57,6 +62,31 @@ function Welcome() {
       />
     </div>
   );
+=======
+function Welcome() {
+    const navigate = useNavigate();
+
+    const handleLoginClick = () => {
+        navigate("/login");
+    };
+
+    const handleRegistrationClick = () => {
+        navigate("/registration");
+    };
+
+    return (
+        <Auth>
+            <h1 className="mt-[40px] text-center text-2xl">Wellcome to CRS</h1>
+            <div className="w-[380px] gap-5 flex flex-col mt-[100px]">
+                <Button title="LOGIN" onClick={handleLoginClick}></Button>
+                <Button
+                    title="REQUEST ACCESS"
+                    onClick={handleRegistrationClick}
+                ></Button>
+            </div>
+        </Auth>
+    );
+>>>>>>> 49379ea7b86a9a5186bb82abbc73b7a0b663a3a6
 }
 
 export default Welcome;
